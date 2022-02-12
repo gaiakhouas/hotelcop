@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>HotelCop.com - Vivez l'expèrience dont vous vous souviendrez</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Situé en pleine avenue montaigne, découvrez l'HotelCcop  et sa vue à couper le souffle sur la Tour Eiffel. Notre hôtel 5 étoiles vous invite à un séjour inoubliable en plein cœur de Paris dans le 8ème arrondissement. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css" >
+  <link rel="stylesheet" type="text/css" href="dist/css/css-animate.css" >
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="dist/css/cookieconsent.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/cookieconsent.min.css" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="src/img/favicons/favicon.ico">
+     <script>
+            window.addEventListener("load", function () {
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#1c1c1c"
+                        },
+                        "button": {
+                            "background": "#fff",
+                            "text": "#1c1c1c"
+                        }
+                    },
+                    "showLink": false,
+                    "theme": "classic",
+                    "content": {
+                        "message": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies ou technologies similaires afin d'obtenir une meilleure expérience utilisateur. <a style='color:white !important;' href='rgpd.html'>En savoir +</a>",
+                        "dismiss": "J'ai compris"
+                    }
+                })
+            });
+  </script> 
+
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v6.0"></script>
+  <!-- debut header -->
+  <header class="fixed-top">
+                 <form method="post" >
+          <input name="search"  class="form-control animated fadeInDown" id="search" type="hidden"  >
+      </form> 
+    <div class="menu">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <a class="navbar-brand nav-bar-e" href="index.html"><img class="img-fluid" id="logo" alt="logo HotelCop"  src='src/img/logoS.svg'></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-bar-e" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Chambres & suites
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <p><a class="dropdown-item nav-bar-e" href="chambres.html">Chambres</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="chambres-classique.html">Classique</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="chambres-confort.html">Confort</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="chambres-deluxe.html">Deluxe</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="chambres-suite.html">Suite</a></p>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Restaurant
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <p><a class="dropdown-item nav-bar-e" href="restaurant.html">Notre établissement</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="cartes-menu.html">Nos cartes</a></p>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-e" href="spa.html"  aria-haspopup="true" aria-expanded="false">
+                Spa
+              </a>
+            </li>
+      
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                L'hôtel
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <p><a class="dropdown-item nav-bar-e" href="qui-sommes-nous.html">Qui sommes nous ?</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="acces-hotel.html">Accès</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="contact.html">Contact</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="recrutement.html">Recrutement</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="evenements.html">Evènements</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="presse.html">Presse</a></p>
+                <p><a class="dropdown-item nav-bar-e" href="avis.html">Avis</a></p>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-e" href="actualites.html"  aria-haspopup="true" aria-expanded="false">
+                Actualités
+              </a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-bar-e nav-link" id="btn-search"><i class="fa fa-search"></i></button>
+            </li>
+             <li class="nav-item">
+              <button type="button" class="nav-bar-e nav-link"  id="btn-print"><i class="fa fa-print"></i></button>
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto " id="ul-nav-important" >
+            <li class="nav-item dropdown" >  <a class="nav-link dropdown-toggle nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Langue</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <p><a class="dropdown-item nav-bar-e" href="index.html"><img src="src/img/fr.png" alt="drapeau français" /> Français</a></p>
+                <p><a class="dropdown-item nav-bar-e"  href="index.html"><img src="src/img/en.png" alt="drapeau anglais" /> Anglais</a></p>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link btn-booking"   href="booking.html">Réservation</a>
+            </li>
+            <li>
+              <a class="nav-link nav-bar-e" href="panier.html"><img src="src/img/shopping-cart.png" class='shop' alt="icone voir mon pannier hotelcop" ></a>
+            </li>
+          </ul>
+          <br class="col-12 col-sm col-md-none">
+        </div>
+      </nav>
+    </div>
+  </header> 
+  <!-- fin header --> 
+  <!-- debut carroussel --> 
+  <div class="container-lg" id="carroussel-bloc" >
+    <div id="carroussel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators d-none d-md-flex">
+        <li data-target="#carroussel" data-slide-to="0" class="active"></li>
+        <li data-target="#carroussel" data-slide-to="1"></li>
+        <li data-target="#carroussel" data-slide-to="2"></li>
+        <li data-target="#carroussel" data-slide-to="3"></li>
+      </ol> 
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href=""><img src="src/img/hotel.jpg" class="d-block w-100"  alt="photo de la tour effeil illuminée de nuit."></a>
+          <div class="carousel-caption">
+            <p  class="title-carroussel animated fadeInDown">Vivez une expérience de rêve !</p>
+            <br>
+            <p class="d-none d-sm-inline">Reservez dès maintenant votre chambre et profitez de nos avantages.</p>
+            <div class="d-none d-sm-block carousel-action">
+              <a href="qui-sommes-nous.html" class="btn btn-infos" >EN SAVOIR PLUS</a>
+              <a href="booking.html" class="btn btn-booking" >JE RESERVE</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href=""><img src="src/img/room.jpg" class="d-block w-100 img-crsl1"  alt="Photo d'une des chambres deluxe de l'hôtelcop"></a>
+          <div class="carousel-caption">
+            <p  class="title-carroussel animated fadeInDown">Séjournez dans les plus belles chambres</p>
+            <br>
+            <p class="d-none d-sm-inline">Reservez dès maintenant votre chambre et profitez de nos avantages.</p>
+            <div class="d-none d-sm-block carousel-action">
+              <a href="chambres.html" class="btn btn-infos" >EN SAVOIR PLUS</a>
+              <a href="booking.html" class="btn btn-booking" >JE RESERVE</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="src/img/restaurant.jpg" class="d-block w-100"  alt="Photo du restaurant 'Belicio' de l'hôtelcop">
+          <div class="carousel-caption">
+            <p  class="title-carroussel animated fadeInDown">Dinez dans un lieu unique !</p>
+            <br>
+            <p class="d-none d-sm-inline">Passez un momment agréable et avec une expérience culinaire exceptionelle.</p>
+            <div class="d-none d-sm-block carousel-action">
+              <a href="restaurant.html" class="btn btn-infos" >EN SAVOIR PLUS</a>
+              <a href="booking.html" class="btn btn-booking" >JE RESERVE</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="src/img/spa.jpg" class="d-block w-100"  alt="Photo du spa  de l'hôtelcop">
+          <div class="carousel-caption">
+            <p  class="title-carroussel animated fadeInDown">Découvrez un endroit magique !</p>
+            <br>
+            <p class="d-none d-sm-inline">Relaxez-vous dans notre spa avec nos meilleurs soins. </p>
+            <div class="d-none d-sm-block carousel-action">
+              <a href="spa.html" class="btn btn-infos" >EN SAVOIR PLUS</a>
+              <a href="booking.html" class="btn btn-booking" >JE RESERVE</a>
+            </div>
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carroussel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carroussel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- fin carroussel -->
+  <!-- Maillage interne -->
+  <main>
+    <div class="container">
+      <br>
+      <h1>Bienvenue dans notre hotel de luxe HotelCop</h1>
+      <br>
+      <section>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 center hideAnimate">
+            <a href="qui-sommes-nous.html"><img  src="src/img/directeur.jpg" class="img-fluid"  alt="Photo de face du directeur hotelcop"></a>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" >
+            <br class="col-12 col-md-none">
+            <h2>Un lieu unique</h2><br>
+            <p>A deux pas de l’Arc de Triomphe, vous avez trouvé votre adresse parisienne par excellence. Vous êtes ici au cœur du Paris incontournable, alliant art de recevoir à la française et élégance intemporelle. <br><br> Une situation rêvée qui vous permettra de découvrir la capitale, ses boutiques de luxe et ses musées. Le temps de votre séjour dans ce majestueux immeuble haussmannien, vous incarnez la vie parisienne brillante et glorieuse.</p>
+            <br>
+            <a href="qui-sommes-nous.html" class="btn-hotelcop" ><strong>En savoir plus</strong></a>
+            <br>
+          </div>
+        </div>
+      </section>
+      <br>
+      <hr>
+      <br>
+      <section>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+             <br class="col-12 col-md-none">
+            <h2>Nos chambres grand luxe</h2><br>
+            <p>Epousant parfaitement l'architecture initiale de ce bâtiment historique et s'enroulant autour de l'escalier majestueux au pied duquel sommeille une malle géante, les 68 chambres de l'hôtel révèlent chacune leur propre originalité.<br><br>
+              Particulièrement lumineuses, nuancées de teintes douces et agencées avec un confort bien pensé, les chambres et suites offrent au regard la splendeur du Palais Royal, la découverte de la rue de Valois, ou dans les étages élevés, un plus large aperçu des pittoresques toits de Paris et de ses célèbres monuments.<br><br>
+            Certaines chambres jouissent d'un balcon, permettant une approche plus directe de l'ambiance parisienne.</p>
+            <br>
+            <a href="chambres.html" class="btn-hotelcop" ><strong>Voir les chambres</strong></a>
+            <br><br>
+
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-main-right center hideAnimate">
+            <a href="chambres.html"><img class="img-fluid center" alt="Photo d'une chambre avec lit luxueux et table d'apoint" src="src/img/room-infos.jpg"></a>
+          </div>
+
+        </div>
+      </section>
+      <br>
+      <hr>
+      <br>
+      <section>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-main-left center hideAnimate">
+            <a href="restaurant.html"><img class="img-fluid" src="src/img/restaurant-infos.jpg" alt="photo du restaurant Blossom"></a>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <br>
+            <h2>Notre restaurant 4 étoiles</h2><br>
+            <p>Un dîner chic et romantique dans l'élégant restaurant Belicio, un déjeuner près du murmure des fontaines, entre palmiers et pommiers en fleurs, une coupe de champagne dans l’univers ultra-mode du Bar du Faubourg, ou un cocktail en terrasse pour voir et être vu … <br> <br> Autant de Rendez-vous avec les dernières tendances, au cœur de Paris !</p>
+            <br>
+            <a href="restaurant.html" class="btn-hotelcop" ><strong>Voir le restaurant</strong></a>
+            <br><br>
+          </div>
+        </div>
+      </section>
+      <br>
+      <hr>
+      <br>
+      <section >
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <h2>Notre service spa</h2><br>
+            <p>Le Spa Carita, cocon tout en blancheur et élégance, est consacré à sublimer la beauté du visage et du corps. Les soins qui y sont prodigués sont une savante alchimie de mains expertes, de techniques exclusives et de produits cosmétiques savamment élaborés.<br><br>
+            Le Salon de Coiffure, le Hammam étoilé ou l'Espace de Remise en forme, sont autant de lieux de bien-être où détente et sérénité s'allient pour permettre au temps de suspendre son vol.</p>
+            <br>
+            <a href="spa.html" class="btn-hotelcop" ><strong>Voir le spa</strong></a>
+            <br><br>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 center img-main-right hideAnimate">
+            <a href="spa.html"><img class="img-fluid" src="src/img/spa-infos.jpg" alt="photo décrivant en premier plan deux serviettes de bain avec un bouquet de fleur et un jacouzzi en arrière plan."></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <br>
+  </main>
+  <!-- Fin maillage interne -->
+  <!-- Début footer -->
+  <footer class="pt-4 my-md-3 pt-md-5 border-top">
+    <div class="container-fluid center" >
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 center">
+          <a class="navbar-brand" href="#"><img class="img-fluid" alt="logo hotelcop en bas de page" src='src/img/logo.svg'></a>
+          <small class="d-block mb-3 text-muted center">&copy; 2020-2021  &#174;</small>
+          <a href="https://www.facebook.com" target="_blank"><img src="src/img/fb.jpg" class="img-fluid" alt="Lien facebook" ></a>
+          <a href="https://www.instagram.com/?hl=fr"><img src="src/img/insta.jpg" class="img-fluid" alt="Lien instagram" ></a>
+          <a href="https://www.youtube.com/?hl=fr&gl=FR"><img src="src/img/youtube.jpg" class="img-fluid" alt="Lien youtube" ></a>
+          <a href="https://twitter.com/?lang=fr"><img src="src/img/twitter.jpg" class="img-fluid" alt="Lien twitter" ></a>
+          <br class="col-12"><br class="col-12">
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+          <p class="title">Notre hôtel</p>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+            <li><a class="text-muted" href="acces-hotel.html">Accès</a></li>
+            <li><a class="text-muted" href="contact.html">Contact</a></li>
+            <li><a class="text-muted" href="recrutement.html">Recrutement</a></li>
+            <li><a class="text-muted" href="evenements.html">Evenements</a></li>
+            <li><a class="text-muted" href="evenements.html">Presse</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+          <p class="title" >Chambres</p>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="chambres.html">Toute les chambres</a></li>
+            <li><a class="text-muted" href="chambres-classique.html">Classique</a></li>
+            <li><a class="text-muted" href="chambres-confort.html">Confort</a></li>
+            <li><a class="text-muted" href="chambres-deluxe.html">Deluxe</a></li>
+            <li><a class="text-muted" href="chambres-suite.html">Suite</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+          <p class="title">Restaurant</p>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="carte-brasserie.html">Brasserie</a></li>
+            <li><a class="text-muted" href="carte-degustation.html">Dégustation</a></li>
+            <li><a class="text-muted" href="carte-restaurant.html">Restaurant</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+          <p class="title" >Spa</p>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="spa.html">Spa et soins</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+          <p class="title">Espace client</p>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="booking.html">Réservation</a></li>
+            <li><a class="text-muted" href="avis.html">Avis</a></li>
+            <li><a class="text-muted" href="contact.html">Besoin d'aide</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+          <p class="title">Liens divers</p>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="mentions-legales.html">Mentions légales</a></li>
+            <li><a class="text-muted" href="cgu.html">Conditions générales d'utilisation</a></li>
+            <li><a class="text-muted" href="plan-de-site.html">Plan du site</a></li>
+            <li><a class="text-muted" onclick="openPrint()" href="#">Imprimer la page</a></li>
+            <li><a class="text-muted" href="newsletter.html">S'inscrire à la newsletter</a></li>
+            <li><br><iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fgaia-kh.com%2Fhotelcop%2F&layout=button&size=small&width=81&height=20&appId" width="81" height="20" style="border:none;overflow:hidden" allow="encrypted-media"></iframe></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- fin Footer -->
+  <script src="dist/js/jquery-min.js"></script>
+  <script src="dist/js/bootstrap.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="dist/js/animation-scroll.js" ></script>
+  <script src="dist/js/animation-pics.js"></script>
+  <script src="dist/js/show-hide-search.js"></script>
+  <script src="dist/js/print-dialog-box.js"></script>
+  <script src="dist/js/cookieconsent.min.js"></script>
+</body>
+</html>

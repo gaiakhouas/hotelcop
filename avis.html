@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>HotelCop.com - Avis</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Donnez dès maintenant un avis sur nos chambres, notre restaurant, notre spa ou l'hôtel en général. Notre devise : plus de commentaires pour une meilleure qualité !">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css" >
+  <link rel="stylesheet" type="text/css" href="dist/css/css-animate.css" >
+    <link rel="stylesheet" href="dist/css/jquery-ui-theme-tabs.min.css">
+  <link rel="stylesheet" href="dist/css/jquery-ui-tabs.structure.min.css">
+  <link rel="stylesheet" href="dist/css/jquery-ui-tabs.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/cookieconsent.min.css" />
+	<!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="src/img/favicons/favicon.ico">
+         <script>
+            window.addEventListener("load", function () {
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#1c1c1c"
+                        },
+                        "button": {
+                            "background": "#fff",
+                            "text": "#1c1c1c"
+                        }
+                    },
+                    "showLink": false,
+                    "theme": "classic",
+                    "content": {
+                        "message": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies ou technologies similaires afin d'obtenir une meilleure expérience utilisateur. <a style='color:white !important;' href='rgpd.html'>En savoir +</a>",
+                        "dismiss": "J'ai compris"
+                    }
+                })
+            });
+  </script> 
+</head>
+<body>
+  <!-- debut header -->
+  <header class="fixed-top">
+    <form method="post" >
+<input name="search"  class="form-control animated fadeInDown" id="search" type="hidden"  >
+</form> 
+<div class="menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+<a class="navbar-brand nav-bar-e" href="index.html"><img class="img-fluid" id="logo" alt="logo HotelCop"  src='src/img/logo.svg'></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle nav-bar-e" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Chambres & suites
+ </a>
+ <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <p><a class="dropdown-item nav-bar-e" href="chambres.html">Chambres</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="chambres-classique.html">Classique</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="chambres-confort.html">Confort</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="chambres-deluxe.html">Deluxe</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="chambres-suite.html">Suite</a></p>
+ </div>
+</li>
+<li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Restaurant
+ </a>
+ <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <p><a class="dropdown-item nav-bar-e" href="restaurant.html">Notre établissement</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="cartes-menu.html">Nos cartes</a></p>
+ </div>
+</li>
+<li class="nav-item">
+ <a class="nav-link nav-bar-e" href="spa.html"  aria-haspopup="true" aria-expanded="false">
+   Spa
+ </a>
+</li>
+
+<li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle  nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   L'hôtel
+ </a>
+ <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <p><a class="dropdown-item nav-bar-e" href="qui-sommes-nous.html">Qui sommes nous ?</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="acces-hotel.html">Accès</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="contact.html">Contact</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="recrutement.html">Recrutement</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="evenements.html">Evènements</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="presse.html">Presse</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="avis.html">Avis</a></p>
+ </div>
+</li>
+<li class="nav-item">
+ <a class="nav-link nav-bar-e" href="actualites.html"  aria-haspopup="true" aria-expanded="false">
+   Actualités
+ </a>
+</li>
+<li class="nav-item">
+ <button type="button" class="nav-bar-e nav-link" id="btn-search"><i class="fa fa-search"></i></button>
+</li>
+<li class="nav-item">
+ <button type="button" class="nav-bar-e nav-link"  id="btn-print"><i class="fa fa-print"></i></button>
+</li>
+</ul>
+<ul class="navbar-nav mr-auto " id="ul-nav-important" >
+<li class="nav-item dropdown" >  <a class="nav-link dropdown-toggle nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Langue</a>
+ <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <p><a class="dropdown-item nav-bar-e" href="index.html"><img src="src/img/fr.png" alt="drapeau français" /> Français</a></p>
+   <p><a class="dropdown-item nav-bar-e"  href="index.html"><img src="src/img/en.png" alt="drapeau anglais" /> Anglais</a></p>
+ </div>
+</li>
+<li>
+ <a class="nav-link btn-booking"   href="booking.html">Réservation</a>
+</li>
+<li>
+ <a class="nav-link nav-bar-e" href="panier.html"><img src="src/img/shopping-cart.png" class='shop' alt="icone voir mon pannier hotelcop" ></a>
+</li>
+</ul>
+<br class="col-12 col-sm col-md-none">
+</div>
+</nav>
+</div>
+</header> 
+  <!-- fin header --> 
+  <main>
+ <div id="mainphoto" class="main-el-page">
+        <img alt="réception de l'hôtel de luxe." class="mx-auto d-block img-fluid" src="src/img/comments.jpg">
+    </div> 
+ <div class="container">   
+  <br>
+  <div class="center">
+  <h1>Votre avis nous intéresse</h1>
+  <p>Découvrez les avis de nos clients sur l'hôtel en général, le restaurant, les chambres ou encore le spa et les soins. <br>Notre devise : "plus d'avis pour plus de qualité".</p>
+    <hr>
+  </div>
+  <div class="row">
+  <div id="tabs" class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 ">
+    <br>
+    <h2 class="center">Nos commentaires (80)</h2>
+    <br>
+  <ul>
+    <li><a href="#tabs-1">L'hôtel</a></li>
+    <li><a href="#tabs-2">Les chambres</a></li>
+    <li><a href="#tabs-3">Le restaurant</a></li>
+    <li><a href="#tabs-4">Le spa et soins</a></li>
+  </ul>
+  <div id="tabs-1">
+   <div class="row" id="addHere">
+       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <span><strong>Alain</strong></span><span> a écrit un avis (Hier)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Issy-les-Moulineaux, France1 contribution</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>Splendide !</strong></span>
+        <br>
+        <p>« Nous sommes bien accueillis. Une équipe souriante. Bien situé au cœur de centre ville.Fenêtres sonorisées. Proche de toutes commodités.»</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <span><strong>Boby</strong></span><span> a écrit un avis (01/02)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Paris, France1 contribution</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>La grande classe !</strong></span>
+        <br>
+        <p>« Un séjour magnifique au coeur de paris. Merci à tout le personnel pour ce séjour inoubliable ! »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+    <div class="col-12 col-sm-12 col-md-4 col-lg-12 col-xl-12">
+        <span><strong>Brigitte</strong></span><span> a écrit un avis (28/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Neuilly-sur-seine, 3 contributions</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>La grande classe !</strong></span>
+        <br>
+        <p>« Je viens régulièrement à l'hotelcop. Au delà de son emplacement de choix, c 'est tout une équipe qui contribue à ce que chaque séjour soit parfait. Les chambres sont extrêmement spacieuses pour Paris, service d'étage très efficace et discret, propreté irréprochable et ne parlons pas du style de l'hôtel... moderne et pourtant très chaleureux. Les petits déjeuners sont excellents, le service conciergerie très à l'écoute et toujours prêt à rendre service. Vous n'êtes pas un client à l'hotelcop... vous êtes un peu chez vous »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <span><strong>Pierre</strong></span><span> a écrit un avis (25/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Lyon, 4 contributions</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>La grande classe !</strong></span>
+        <br>
+        <p>« Très bel hotel, en plein coeur de paris proche de la tour eiffeil. Un service parfait, et surtout une équipe de qualité a tous les postes. Le petit déjeuner est très agréable. Reserver en direct ils offrent le taxi retour pour l'aéroport. Un vrai plus! »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+   </div>
+  </div>
+  <div id="tabs-2">
+ <div class="row">
+       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <span><strong>Jean Luc Burtet</strong></span><span> a écrit un avis (27/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Marseille, 5 contributions</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>Chambres de grand luxe !</strong></span>
+        <br>
+        <p>« Les chic du chic sur l'avenue montaigne. Chambres magnifiques, acceuil chaleureux et personnalisé, le fin du fin..»</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+     <div class="col-12 col-sm-12 col-md-4 col-lg-12 col-xl-12">
+        <span><strong>George</strong></span><span> a écrit un avis (26/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Cannes, 5 contributions</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>Un merveilleux séjour !</strong></span>
+        <br>
+        <p>« Excellent accueil, contact par mail personnalisé, à l’écoute , très pro, excellent emplacement, très belle chambre, service parfait. Cet établissement est à la hauteur de ses prix. Tout est fait pour que vous passiez un séjour des plus agréables.
+Merci »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-12 col-xl-12">
+        <span><strong>Phillipe</strong></span><span> a écrit un avis (24/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Montpellier, 5 contributions</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>Un merveilleux séjour !</strong></span>
+        <br>
+        <p>« Nous avons séjourné une nuit dans ce très bel hôtel avec notre fille de 2 ans. Très bien situé, à deux pas des Champs Elysées.
+          L'équipe a été aux petits soins dès notre arrivée : service voiturier, bagages montés en chambre, invitation au bar et réceptionnistes très avenants … La chambre était parfaite pour nous 3 avec assez d’espace pour le lit bébé, propre, calme, nous aurions aimé y rester encore plus longtemps !!!
+          Nous sommes passés par le bar, les cocktails avec et sans alcool, très original, ils nous ont convaincu !
+        Large choix au petit déjeuner avec le buffet sucré/salé, un régal.
+      Bref, une belle découverte :) »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+  </div>
+  </div>
+  <div id="tabs-3">
+         <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+        <span><strong>Lucie</strong></span><span> a écrit un avis (22/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Pau, 2 contributions</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star "></span>
+        <br>
+      
+        <span><strong>Un restaurant de grande gastronomie</strong></span>
+        <br>
+        <p>« Il s'agit certainement du meilleur restaurant dans lequel j'ai eu l'occasion de manger. Les plats sont beaux, inventifs et surtout pleins de saveurs. Le service est efficae et très discret; Le sommelier d'excellent conseil. Le cadre impressionnant.
+Enfin, une mention particulière au Maître d'Hôtel qui est d'un professionnalisme et d'une gentillesse non feinte.
+Bravo je reviendrai. »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+        <span><strong>Laura</strong></span><span> a écrit un avis (15/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Pau, 2 contributions</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>Parfait</strong></span>
+        <br>
+        <p>« Nous avons déjeuné au Cinq ce 1er octobre avec beaucoup de plaisir.Tout est parfait:un accueil attentionné,un menu déjeuner de grande qualité, avec des pre plats très fins, un service très gentil et efficace,un cadre exceptionnel et superbement fleuri. Cela convient aussi bien pour un déjeuner en famille qu' avec des amisNous y retournerons .! »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+
+  </div>
+</div>
+   <div id="tabs-4">
+    <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+        <span><strong>Charles</strong></span><span> a écrit un avis (14/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Brest, 1 contribution</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star "></span>
+        <br>
+      
+        <span><strong>Une très agréable parenthèse de douceur</strong></span>
+        <br>
+        <p>« Personnel agréable et prévenant. Locaux propres et bien tenus quoique que quelque peu exigus. Massage très agréable. »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+        <span><strong>Marie</strong></span><span> a écrit un avis (12/01)</span>
+        <br><span class="avis-ville"><i class="fa fa-map-marker"></i> Brest, 1 contribution</span>
+        <br>
+        <div class="bloc-avis">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <br>
+      
+        <span><strong>Je ne m’en lasse pas !</strong></span>
+        <br>
+        <p>« Apres avoir cherché pendant des heures un bon rapport qualité/prix en matière de bien-être en SPA, je me suis retrouvé à rester sur cette valeur sure qui est le SPA Lucia. J’ai effectué un accès d’1h en SPA + 2h de soin corps (gommage/enveloppement/massage). Pour une fois, la… »</p>
+        <p>Date du séjour : janvier 2020</p>
+      </div>
+      <a href="#"><i class="fa fa-thumbs-o-up btn-social"></i><span class="media-text"> Utile</span></a>
+      <a href="#"><i class="fa fa-share btn-social"></i><span class="media-text"> Partager</span></a>
+        <hr>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-action" >
+        <form method="post" action="#">
+          <fieldset class="scheduler-border" >
+            <legend  class="scheduler-border " >Ajoutez votre avis !</legend>
+            <label for="nom">Nom 
+              <span class="required">*</span> 
+            </label>
+            <div id="warning-nom" class="warning-form"></div>
+            <input type="text" id="nom" name="nom" minlength="2" placeholder="Votre nom" class="form-control" required >
+            <label for="prenom">Prénom 
+              <span class="required">*</span>
+            </label>
+            <div id="warning-prenom" class="warning-form"></div>
+            <input type="text" id="prenom" name="prenom" minlength="2"  required placeholder="Votre prénom" class="form-control"  >
+             <label for="categorie" >Catégorie <span class="required">*</span></label>
+             <div id="warning-categorie" class="warning-form"></div>
+            <select name="categorie" id="categorie"  class="form-control"  >
+              <option value="">Sélectionnez une catégorie</option>
+              <option value="chambre">chambre</option>
+              <option value="restaurant">restaurant</option>
+              <option value="spa">spa</option>
+              <option value="general">ordre général</option>
+            </select>
+            <label for="email" >Email 
+              <span class="required">*</span>
+            </label>
+             <div id="warning-email" class="warning-form"></div>
+            <input type="text" name="email" placeholder="Votre email"  id="email" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" >
+              <label for="msg" >Votre avis 
+              <span class="required">*</span>
+            </label>
+            <div id="warning-msg" class="warning-form" ></div>
+            <textarea class="form-control" id="msg" name="msg" minlength="10"  required placeholder="Veuillez saisir votre message"></textarea>
+              <br>
+                <input type="checkbox" name="cgu"  > J'ai lu, compris et accepte les <a target="_blank" href="cgu.html">conditions générales d'utilisation</a>.<br><br>
+                 <div class="center">
+              <button id="envoiAvis"  class="btn-booking" type="button" data-toggle="modal" data-target="#confirmEnvoi" >AJOUTER MON AVIS</button>
+            </div>
+          </fieldset>
+
+        </form>
+      </div>
+</div>
+</div>
+ </div> 
+   <!-- Modal -->
+  <div class="modal fade" id="confirmEnvoi" tabindex="-1" role="dialog" aria-labelledby="confirmEnvoi" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="src/img/validation-form.jpg" class="img-fluid" alt="Hotelcop Receptioniste souriante au téléphonne">
+          <div class="center">
+            <br>
+            <button type="button" class="btn btn-secondary center" data-dismiss="modal">J'ai bien compris !</button>
+            <br>  <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+<!-- Début footer -->
+<footer class="pt-4 my-md-3 pt-md-5 border-top">
+  <div class="container-fluid center" >
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 center">
+        <a class="navbar-brand" href="#"><img class="img-fluid" alt="logo hotelcop en bas de page" src='src/img/logo.svg'></a>
+        <small class="d-block mb-3 text-muted center">&copy; 2020-2021  &#174;</small>
+        <a href="https://www.facebook.com" target="_blank"><img src="src/img/fb.jpg" class="img-fluid" alt="Lien facebook" ></a>
+        <a href="https://www.instagram.com/?hl=fr"><img src="src/img/insta.jpg" class="img-fluid" alt="Lien instagram" ></a>
+        <a href="https://www.youtube.com/?hl=fr&gl=FR"><img src="src/img/youtube.jpg" class="img-fluid" alt="Lien youtube" ></a>
+        <a href="https://twitter.com/?lang=fr"><img src="src/img/twitter.jpg" class="img-fluid" alt="Lien twitter" ></a>
+        <br class="col-12"><br class="col-12">
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+        <p class="title">Notre hôtel</p>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+          <li><a class="text-muted" href="acces-hotel.html">Accès</a></li>
+          <li><a class="text-muted" href="contact.html">Contact</a></li>
+          <li><a class="text-muted" href="recrutement.html">Recrutement</a></li>
+          <li><a class="text-muted" href="evenements.html">Evenements</a></li>
+          <li><a class="text-muted" href="evenements.html">Presse</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+        <p class="title" >Chambres</p>
+        <ul class="list-unstyled text-small">
+          
+          <li><a class="text-muted" href="chambres-classique.html">Classique</a></li>
+          <li><a class="text-muted" href="chambres-confort.html">Confort</a></li>
+          <li><a class="text-muted" href="chambres-deluxe.html">Deluxe</a></li>
+          <li><a class="text-muted" href="chambres-suite.html">Suite</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+        <p class="title">Restaurant</p>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="carte-brasserie.html">Brasserie</a></li>
+          <li><a class="text-muted" href="carte-degustation.html">Dégustation</a></li>
+          <li><a class="text-muted" href="carte-restaurant.html">Restaurant</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+        <p class="title" >Spa</p>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="spa.html">Spa et soins</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+        <p class="title">Espace client</p>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="booking.html">Réservation</a></li>
+          <li><a class="text-muted" href="avis.html">Avis</a></li>
+          <li><a class="text-muted" href="contact.html">Besoin d'aide</a></li>
+        </ul>
+      </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+      
+      </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+        <p class="title">Liens divers</p>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="mentions-legales.html">Mentions légales</a></li>
+          <li><a class="text-muted" href="cgu.html">Conditions générales d'utilisation</a></li>
+          <li><a class="text-muted" href="plan-de-site.html">Plan du site</a></li>
+          <li><a class="text-muted" onclick="openPrint()" href="#">Imprimer la page</a></li>
+          <li><a class="text-muted" href="newsletter.html">S'inscrire à la newsletter</a></li>
+          <li><iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fgaia-kh.com%2Fhotelcop%2F&layout=button&size=small&width=81&height=20&appId" width="81" height="20" style="border:none;overflow:hidden" allow="encrypted-media"></iframe></li>
+        </ul>
+      </div>
+        </div>
+      </div>
+</footer>
+<!-- fin Footer -->
+<script src="dist/js/jquery-min.js"></script>
+<script src="dist/js/jquery-ui-tabs.min.js"></script>
+<script src="dist/js/bootstrap.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="dist/js/animation-scroll.js" ></script>
+<script src="dist/js/show-hide-search.js"></script>
+<script src="dist/js/print-dialog-box.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+ <script src="dist/js/control-form-avis.js" ></script> 
+ <script src="dist/js/cookieconsent.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,567 @@
+/* Ci dessous le reset css avant la mise en place du style : */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Ci-dessous le code css appliqué à toutes les pages du site www.hotelcop.com :  */
+
+
+
+button:focus{
+	outline:0 !important;
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+
+    box-shadow: none !important;
+    border-color: #bbaf3a !important;
+}
+
+
+
+
+select:active,
+select:focus{
+	
+    box-shadow: none !important;
+    border-color: #bbaf3a !important;
+}
+
+button:hover{
+	border-color: 1px solid #ced4da !important;
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cc-dismiss:hover{
+	color:black !important;
+}
+
+#navbar{
+	
+	transition:all 0.2s ease-in-out;
+}
+
+#navbar.actived-content{
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	
+}
+
+.actived-content{
+	background-color: #2c2c2c !important;
+	border-bottom: 1px solid #bbaf3a;
+
+}
+
+
+.dropdown-menu.actived-content{
+	border-bottom: 0.5px solid #bbaf3a !important;
+	border-left: 0.5px solid #bbaf3a !important;
+	border-right: 0.5px solid #bbaf3a !important;
+
+}
+
+.actived-content > .nav-bar-e{
+	color: #ffff !important;
+}
+
+/* [Gaia]  19/01 : ajout d'une transition sur les elements de la nav bar lors du survol   */
+
+.nav-bar-e{
+	transition:0.5s;
+}
+
+.nav-bar-e:hover{
+	background-color:transparent!important;
+	color: #bbaf3a !important;
+
+}
+
+/* fin transition */
+
+.navbar-collapse {
+  text-align: center;
+}
+
+
+
+.center{
+	text-align:center;
+}
+
+.nav-item{
+	text-align:center;
+}
+
+#btn-infos, .btn-infos{
+	background-color: #2c2c2c !important;
+	color: #ffffff !important;
+}
+
+.btn-infos{
+	padding: 10px;
+	text-align: center;
+	color:white ;
+}
+
+.btn-infos > a{
+	color:white !important;
+}
+
+
+
+.btn-booking{
+	background-color: #bbaf3a !important;
+	color: #ffffff !important;
+	padding: 10px;
+	border: 0px !important;
+}
+
+#logo{
+	width:190px;
+}
+
+
+#lang{
+	text-align:center !important;
+}
+
+.nav-search{
+	padding-left: 20px;
+}
+
+.dropdown-menu {
+	border:0px !important;
+	background-color: #f8f9fa ;
+	transition: 2s;
+	margin: 0px !important;
+}
+
+.dropdown-menu > p {
+	text-align: center;
+}
+
+
+#carroussel-bloc{
+	margin-top: 90px;
+	padding:0px;
+}
+
+.carousel-action{
+	margin-top: 2%;
+}
+
+.carousel-caption{
+	top:10%;
+}
+
+
+.title-carroussel{
+	color:#ffff;
+	font-size:32px;
+
+}
+
+.hideAnimate {
+  opacity:0;
+ 
+}
+
+#mainphoto{
+	margin-top: 90px;
+	padding:0px;
+	
+}
+
+.main-img-page{
+	opacity:1;
+}
+
+
+
+h1{
+	text-align: center;
+}
+
+
+h1{
+	font-family : 'Lato', sans-serif;
+	font-size: 32px;
+	color: #bbaf3a;
+}
+
+h2{
+	font-family : 'Lato', sans-serif;
+	font-size: 27px;
+	color: #474b50;
+	text-align: left;
+}
+
+h2 > p {
+	padding-left: 20px;
+}
+
+h3{
+	font-size: 22px;
+	color: #474b50;
+}
+
+.filarriane , .filarriane > a{
+	color: #545252 !important;
+}
+
+
+
+input[type=file]{
+	background-color: white !important;
+}
+
+.form-action{
+	margin-top: 50px;
+}
+
+.required{
+	color:red;
+}
+
+.warning-form{
+	color:white;
+	font-size: 12px;
+	display:inline!important;
+}
+
+.modal-body{
+	padding: 0px !important;
+}
+
+
+label{
+	margin-top: 5px;
+}
+
+fieldset.scheduler-border {
+    border: 5px solid #bbaf3a !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+
+}
+
+fieldset.scheduler-border2 {
+    border: 5px solid  #bbaf3a !important;
+    border-radius: 10px;
+    padding: 0 1.4em 0.1em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+
+}
+
+	
+legend{display:block; width:150px; margin:auto;}
+
+
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    width:auto;
+
+    border-bottom:none;
+    padding: 10px;
+    color:white;
+    background: #bbaf3a;
+}
+
+
+
+.btn-site{
+	background-color: #2c2c2c !important;
+	color: #ffffff !important;
+	text-align:center;
+	padding:10px;
+	background-color:#474b50;
+	margin-bottom:10px;
+}
+
+
+.btn-site > a{
+	color: #ffffff !important;
+
+}
+
+.textUnderImg {
+	margin-top : 20px;
+
+}
+
+
+
+p > strong > a {
+
+	color: #2c2c2c !important;
+	text-decoration: none !important;
+}
+
+
+.btn-hotelcop{
+	border-top:1px solid #bbaf3a;
+	border-bottom: 1px solid #bbaf3a;
+	border-left: 0px;
+	border-right: 0px;
+	padding:10px;
+	color:#bbaf3a !important;
+	text-decoration: none !important;
+}
+
+
+
+
+.btn-site > a{
+	color: #ffffff !important;
+
+}
+
+.img-main-right, .img-main-left{
+	padding:0px !important;
+}
+
+/* gère la taille du div  qui contient la map */
+#map {
+  height: 400px;  
+  width: 100%; 
+}
+
+.link-infos > a{
+	color:white !important;
+ 
+}
+
+.link-gold, .link-gold:hover {
+	color:#bbaf3a;
+	text-decoration: none;
+}
+
+.title{
+		font-size:21px;
+	}
+
+#ul-nav-important > li{
+	float:right;
+	vertical-align: right;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(241,241,241, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(241,241,241) !important;
+} 
+
+#btn-search, #btn-print{
+	border:0px;
+	background-color: transparent;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+#search{
+	border-radius:0px!important;
+}
+
+.avis-ville{
+	color : #b7b7b7;
+	font-size:12px;
+}
+
+.note{
+	background-color: #2c2c2c;
+	color:white;   
+    height:400px;
+    border-radius:8px;
+    -moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	padding: 10px;
+	text-align: right;
+}
+
+.checked {
+  color: orange;
+}
+
+.bloc-avis{
+	background-color: #f9f9f9;
+	padding:10px;
+}
+
+.btn-social{
+	color : #a8bbd4;
+}
+
+.media-text{
+	font-weight:bold;
+	font-size:12px;
+}
+
+
+
+@media (min-width: 576px) { 
+	#carroussel-bloc{
+		padding:0px;
+	}
+ }
+
+
+@media (min-width: 768px) { 
+
+#carroussel-bloc{
+		padding:0px;
+	}
+
+.bloc-form{
+	text-align:center;
+}
+
+.carousel-caption{
+	top:10%;
+}
+
+
+}
+
+	
+@media (min-width: 992px) {
+
+	/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {display: block ;}
+
+
+.dropdown-menu:hover.dropdown-menu {display: block ;}
+
+
+#carroussel-bloc{
+		padding:0px;
+		max-width: 1366px;
+		margin-top: 60px;
+		
+	}
+
+	#mainphoto{
+		margin-top: 60px;		
+	}
+
+
+.btn-site{
+		margin-left:30%;
+		margin-right:30%;
+
+	}
+
+
+.dropdown-menu {
+	border:0px !important;
+	background-color: #f8f9fa ;
+	padding-top:10px;
+	border:1px solid #bbaf3a;
+	
+}
+
+.nav-item{
+	padding-left:10px !important;
+	}
+
+	
+
+	.title-carroussel{
+	color:#ffff;
+	font-size:60px;
+
+}
+
+.form-action{
+	margin-top: 40px;
+}
+
+
+
+
+}
+
+
+@media (min-width: 1200px) { 
+
+	#carroussel-bloc{
+		padding:0px;
+		max-width: 1366px;
+
+	}
+
+
+
+	
+
+}
+
+
+
+
+ 

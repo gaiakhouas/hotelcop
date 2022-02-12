@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>HotelCop.com - Réservation</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Résevez dès maintenant votre chambre ou suite dans notre hotêl 5 étoiles, et profitez du restaurant et de notre service soins et spa.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css" >
+  <link rel="stylesheet" type="text/css" href="dist/css/css-animate.css" >
+  <link rel="stylesheet" href="dist/css/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="dist/css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="dist/css/jquery-ui.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/cookieconsent.min.css" />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="src/img/favicons/favicon.ico">
+  <script>
+            window.addEventListener("load", function () {
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#1c1c1c"
+                        },
+                        "button": {
+                            "background": "#fff",
+                            "text": "#1c1c1c"
+                        }
+                    },
+                    "showLink": false,
+                    "theme": "classic",
+                    "content": {
+                        "message": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies ou technologies similaires afin d'obtenir une meilleure expérience utilisateur. <a style='color:white !important;' href='rgpd.html'>En savoir +</a>",
+                        "dismiss": "J'ai compris"
+                    }
+                })
+            });
+  </script> 
+</head>
+<body>
+  <!-- debut header -->
+  <header class="fixed-top">
+    <form method="post" >
+<input name="search"  class="form-control animated fadeInDown" id="search" type="hidden"  >
+</form> 
+<div class="menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+<a class="navbar-brand nav-bar-e" href="index.html"><img class="img-fluid" id="logo" alt="logo HotelCop"  src='src/img/logo.svg'></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle nav-bar-e" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Chambres & suites
+ </a>
+ <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <p><a class="dropdown-item nav-bar-e" href="chambres.html">Chambres</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="chambres-classique.html">Classique</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="chambres-confort.html">Confort</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="chambres-deluxe.html">Deluxe</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="chambres-suite.html">Suite</a></p>
+ </div>
+</li>
+<li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Restaurant
+ </a>
+ <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <p><a class="dropdown-item nav-bar-e" href="restaurant.html">Notre établissement</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="cartes-menu.html">Nos cartes</a></p>
+ </div>
+</li>
+<li class="nav-item">
+ <a class="nav-link nav-bar-e" href="spa.html"  aria-haspopup="true" aria-expanded="false">
+   Spa
+ </a>
+</li>
+
+<li class="nav-item dropdown">
+ <a class="nav-link dropdown-toggle  nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   L'hôtel
+ </a>
+ <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <p><a class="dropdown-item nav-bar-e" href="qui-sommes-nous.html">Qui sommes nous ?</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="acces-hotel.html">Accès</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="contact.html">Contact</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="recrutement.html">Recrutement</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="evenements.html">Evènements</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="presse.html">Presse</a></p>
+   <p><a class="dropdown-item nav-bar-e" href="avis.html">Avis</a></p>
+ </div>
+</li>
+<li class="nav-item">
+ <a class="nav-link nav-bar-e" href="actualites.html"  aria-haspopup="true" aria-expanded="false">
+   Actualités
+ </a>
+</li>
+<li class="nav-item">
+ <button type="button" class="nav-bar-e nav-link" id="btn-search"><i class="fa fa-search"></i></button>
+</li>
+<li class="nav-item">
+ <button type="button" class="nav-bar-e nav-link"  id="btn-print"><i class="fa fa-print"></i></button>
+</li>
+</ul>
+<ul class="navbar-nav mr-auto " id="ul-nav-important" >
+<li class="nav-item dropdown" >  <a class="nav-link dropdown-toggle nav-bar-e" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Langue</a>
+ <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+   <p><a class="dropdown-item nav-bar-e" href="index.html"><img src="src/img/fr.png" alt="drapeau français" /> Français</a></p>
+   <p><a class="dropdown-item nav-bar-e"  href="index.html"><img src="src/img/en.png" alt="drapeau anglais" /> Anglais</a></p>
+ </div>
+</li>
+<li>
+ <a class="nav-link btn-booking"   href="booking.html">Réservation</a>
+</li>
+<li>
+ <a class="nav-link nav-bar-e" href="panier.html"><img src="src/img/shopping-cart.png" class='shop' alt="icone voir mon pannier hotelcop" ></a>
+</li>
+</ul>
+<br class="col-12 col-sm col-md-none">
+</div>
+</nav>
+</div>
+</header>  
+  <!-- fin header --> 
+  <main>
+    <div class="container">
+      <div class="row" id="mainphoto" >
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 center">
+          <br>
+          <h1>R&Eacute;SERVEZ VOTRE CHAMBRE DE STANDING HOTELCOP !</h1>
+          <p>Offrez-vous un Séjour de Luxe dans notre établissement HOTEL, au coeur de Paris.<br><br>
+          Réservez dès aujourd'hui !</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <hr>
+          <br>
+        </div>
+        <div class="col-sm-none col-md-12 col-lg-6 col-xl-6 center animated fadeInDown">
+          <img alt="hotesse d'accueil pour rendez-vous" class="img-fluid" src="src/img/reservation.jpg">
+          <br><br>
+        </div> 
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 justify-content-around">
+          <form method="post" action="#" enctype="multipart/form-data" >
+            <fieldset class="scheduler-border" >
+              <legend  class="scheduler-border " >VOTRE R&Eacute;SERVATION</legend>
+              <br>
+              <label for="nom">Nom 
+                <span class="required">*</span> 
+              </label>
+              <div id="warning-nom" class="warning-form"></div>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" minlength="2"  class="form-control" required >
+              <label for="prenom">Prénom 
+                <span class="required">*</span>
+              </label>
+              <div id="warning-prenom" class="warning-form"></div>
+              <input type="text" id="prenom" name="prenom" minlength="2"  required placeholder="Votre prénom" class="form-control"  >
+              <label for="email" >Email 
+                <span class="required">*</span>
+              </label>
+              <div id="warning-email" class="warning-form"></div>
+              <input type="text" name="email" placeholder="Votre email"  id="email" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" >
+              <div id="selectgamme">
+                <label for="gamme">Gamme de chambre:
+                  <span class="required">*</span></label>
+                  <div id="warning-gamme" class="warning-form"></div>
+                  <select required name="gamme" id="gamme" class="form-control">
+                    <option value="">Sélectionnez une gamme</option> 
+                    <option value="classique">Classique</option> 
+                    <option value="confort">Confort</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="suite">Suites</option>
+                  </select>
+                </div>
+                <div id="selectpersonne">
+                  <label for="personne">Nombre de personnes:
+                    <span class="required">*</span></label>
+                    <div id="warning-personne" class="warning-form"></div>
+                    <select required name="personne" id="personne" class="form-control" >
+                      <option value="">Sélectionnez un nombre</option> 
+                      <option value="1">1 personne</option> 
+                      <option value="2">Couple</option>
+                      <option value="3">Couple + 1 enfant</option>
+                      <option value="4">4 personnes</option>
+                      <option value="+4">+ de 4 personnes</option>
+                    </select>
+                  </div>
+                  <div id="choixdate">
+                    <label for="start">Jour d'arrivée:
+                      <span class="required">*</span></label>
+                      <div id="warning-start" class="warning-form"></div>
+                      <input type="text" class="form-control datepicker"  placeholder="Jour d'arrivée"  required maxlength="10" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" readonly name="trip-start" id="start" size="30" >
+                      <label for="end" id="depart">Jour de départ:
+                        <span class="required">*</span></label>
+                        <div id="warning-end" class="warning-form"></div>
+                        <input type="text" required class="form-control datepicker"  placeholder="Jour de départ" maxlength="10" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" readonly name="trip-end" id="end" size="30" >
+                      </div> 
+                      <br>
+                      <div class="center">
+                        <button  class="btn-booking" type="button" data-toggle="modal" data-target="#confirmEnvoi" >ENVOYER MA DEMANDE DE RESERVATION</button>
+                        <br>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="confirmEnvoi" tabindex="-1" role="dialog" aria-labelledby="confirmEnvoi" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img src="src/img/validation-form-reservation.jpg"  class="img-fluid" alt="Hotelcop Receptioniste souriante au téléphonne">
+                    <div class="center">
+                      <br>
+                      <button type="button" class="btn btn-secondary center" data-dismiss="modal">Merci Nous avons bien  enregistré votre réservation !</button>
+                      <br><br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <!-- Fin maillage interne -->
+          <!-- Début footer -->
+          <footer class="pt-4 my-md-3 pt-md-5 border-top">
+            <div class="container-fluid center" >
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 center">
+                  <a class="navbar-brand" href="#"><img class="img-fluid" alt="logo hotelcop en bas de page" src='src/img/logo.svg'></a>
+                  <small class="d-block mb-3 text-muted center">&copy; 2020-2021  &#174;</small>
+                  <a href="https://www.facebook.com" target="_blank"><img src="src/img/fb.jpg" class="img-fluid" alt="Lien facebook" ></a>
+                  <a href="https://www.instagram.com/?hl=fr"><img src="src/img/insta.jpg" class="img-fluid" alt="Lien instagram" ></a>
+                  <a href="https://www.youtube.com/?hl=fr&gl=FR"><img src="src/img/youtube.jpg" class="img-fluid" alt="Lien youtube" ></a>
+                  <a href="https://twitter.com/?lang=fr"><img src="src/img/twitter.jpg" class="img-fluid" alt="Lien twitter" ></a>
+                  <br class="col-12"><br class="col-12">
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                  <p class="title">Notre hôtel</p>
+                  <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+                    <li><a class="text-muted" href="acces-hotel.html">Accès</a></li>
+                    <li><a class="text-muted" href="contact.html">Contact</a></li>
+                    <li><a class="text-muted" href="recrutement.html">Recrutement</a></li>
+                    <li><a class="text-muted" href="evenements.html">Evenements</a></li>
+                    <li><a class="text-muted" href="evenements.html">Presse</a></li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                  <p class="title" >Chambres</p>
+                  <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="chambres.html">Toute les chambres</a></li>
+                    <li><a class="text-muted" href="chambres-classique.html">Classique</a></li>
+                    <li><a class="text-muted" href="chambres-confort.html">Confort</a></li>
+                    <li><a class="text-muted" href="chambres-deluxe.html">Deluxe</a></li>
+                    <li><a class="text-muted" href="chambres-suite.html">Suite</a></li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                  <p class="title">Restaurant</p>
+                  <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="carte-brasserie.html">Brasserie</a></li>
+                    <li><a class="text-muted" href="carte-degustation.html">Dégustation</a></li>
+                    <li><a class="text-muted" href="carte-restaurant.html">Restaurant</a></li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                  <p class="title" >Spa</p>
+                  <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="spa.html">Spa et soins</a></li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                  <p class="title">Espace client</p>
+                  <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="booking.html">Réservation</a></li>
+                    <li><a class="text-muted" href="avis.html">Avis</a></li>
+                    <li><a class="text-muted" href="contact.html">Besoin d'aide</a></li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                  <p class="title">Liens divers</p>
+                  <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a class="text-muted" href="cgu.html">Conditions générales d'utilisation</a></li>
+                    <li><a class="text-muted" href="plan-de-site.html">Plan du site</a></li>
+                    <li><a class="text-muted" onclick="openPrint()" href="#">Imprimer la page</a></li>
+                    <li><a class="text-muted" href="newsletter.html">S'inscrire à la newsletter</a></li>
+                    <li><iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fgaia-kh.com%2Fhotelcop%2F&layout=button&size=small&width=81&height=20&appId" width="81" height="20" style="border:none;overflow:hidden" allow="encrypted-media"></iframe></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <!-- fin Footer -->
+<script src="dist/js/jquery-min.js"></script>
+<script src="dist/js/jquery-ui.min.js"></script>
+<script src="dist/js/bootstrap.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="dist/js/animation-scroll.js" ></script>
+<script src="dist/js/show-hide-search.js"></script>
+<script src="dist/js/date-selection.js"></script>
+<script src="dist/js/control-form-reservation.js" ></script>
+<script src="dist/js/print-dialog-box.js"></script>
+<script src="dist/js/cookieconsent.min.js"></script>
+</body>
+</html>
